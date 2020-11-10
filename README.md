@@ -4,6 +4,7 @@ Implementation of neural network and genetic algorithm in godot game engine with
 Type of implemented neural network:
 1. Feed Forward Neural Network
 2. Vanilla Recurrent Neural Network
+3. Sequential
 
 # Evolution Algorithm
 I am using genetic algorithm strategy to optimize neural network.
