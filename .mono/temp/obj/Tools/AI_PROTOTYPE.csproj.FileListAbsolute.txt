@@ -1,0 +1,6 @@
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/obj/Tools/AI_PROTOTYPE.csprojAssemblyReference.cache
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/obj/Tools/AI_PROTOTYPE.csproj.CoreCompileInputs.cache
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/bin/Tools/AI_PROTOTYPE.dll
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/bin/Tools/AI_PROTOTYPE.pdb
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/obj/Tools/AI_PROTOTYPE.dll
+/media/setra/DISK1/Lab/GODOT/AI_PROTOTYPE/.mono/temp/obj/Tools/AI_PROTOTYPE.pdb

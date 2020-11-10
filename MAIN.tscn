@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Manager.cs" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 25.8549, 1, 58.3846 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.0313726, 0.0666667, 0.984314, 1 )
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="SphereMesh" id=6]
+
+[sub_resource type="SphereShape" id=7]
+
+[node name="MainScene" type="Node"]
+
+[node name="Manager" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Terrain" type="StaticBody" parent="Manager"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/Terrain"]
+transform = Transform( 50.1504, 0, 0, 0, 1, 0, 0, 0, 58.5965, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/Terrain"]
+transform = Transform( 1.91206, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Wall" type="StaticBody" parent="Manager"]
+transform = Transform( 49.7399, 0, 0, 0, 2.76091, 0, 0, 0, -1.53973, 0, 3.76968, -56.5879 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/Wall"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/Wall"]
+shape = SubResource( 5 )
+
+[node name="Wall2" type="StaticBody" parent="Manager"]
+transform = Transform( 49.7399, 0, 0, 0, 2.76091, 0, 0, 0, -1.53973, 0, 3.76968, 56.8702 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/Wall2"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/Wall2"]
+shape = SubResource( 5 )
+
+[node name="Wall3" type="StaticBody" parent="Manager"]
+transform = Transform( 9.28648e-06, -1.75168e-13, -1.54, 2.21966e-05, 2.761, -1.69436e-21, 57, -1.07517e-06, 2.50898e-07, -48.303, 3.76968, 0.476419 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/Wall3"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/Wall3"]
+shape = SubResource( 5 )
+
+[node name="Wall4" type="StaticBody" parent="Manager"]
+transform = Transform( 9.28648e-06, -1.75168e-13, -1.54, 2.21966e-05, 2.761, -1.69436e-21, 57, -1.07517e-06, 2.50898e-07, 47.7978, 3.76968, 0.476419 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/Wall4"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/Wall4"]
+shape = SubResource( 5 )
+
+[node name="Camera" type="Camera" parent="Manager"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 90, 0 )
+
+[node name="SpawnPoint" type="Spatial" parent="Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7974, 2.102, -44.3905 )
+
+[node name="ArrivePoint" type="StaticBody" parent="Manager"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -30.8181, 3.38156, 44.8661 )
+constant_linear_velocity = Vector3( -31, 2, 44 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Manager/ArrivePoint"]
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Manager/ArrivePoint"]
+shape = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
